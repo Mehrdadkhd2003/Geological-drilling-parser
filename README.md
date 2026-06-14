@@ -45,7 +45,7 @@ A custom boundary detection algorithm (`find_next_line_boundaries`) locates hori
 Once the Lithology column is isolated, boundaries are used to reconstruct the cellular grid. Every horizontal line denotes a 5-meter depth interval. The row is divided into 10 distinct cells, where each cell represents exactly 10% of the rock composition at that specific depth.
 
 <div align="center">
-  <img src="assets/lithology_grid4.jpg" alt="Lithology Grid Detection" width="400"/>
+  <img src="assets/lithology_grid4.png" alt="Lithology Grid Detection" width="400"/>
   <p><b>Figure 3:</b> Red lines indicate the algorithm successfully slicing the column into a 10-cell grid per row.</p>
 </div>
 
@@ -73,7 +73,7 @@ The classification dictionary follows a strict decision tree:
 If a symbol is heavily distorted by printing noise or falls outside the predefined dictionary rules, the model flags it as `UNKNOWN`. This strict logic prevents the dangerous misclassification of out-of-distribution patterns.
 
 <div align="center">
-  <img src="assets/lithology_output.jpg" alt="Lithology Classification Output" width="600"/>
+  <img src="assets/lithology_output.png" alt="Lithology Classification Output" width="600"/>
   <p><b>Figure 5:</b> The model successfully classifying cells and safely labeling unrecognizable anomalies as UNKNOWN.</p>
 </div>
 
@@ -84,7 +84,7 @@ The drill rate (Weight on Bit) is represented by a fluctuating blue curve.
 3. **Linear Interpolation:** The chart is frequently obscured by black text or intersecting curves. When the blue line disappears, the row is marked as `NaN`. A linear interpolation algorithm seamlessly bridges these gaps to reconstruct the true trajectory.
 
 <div align="center">
-  <img src="assets/drillrate_reconstruction.jpg" alt="Curve Reconstruction" width="700"/>
+  <img src="assets/drillrate_reconstruction.png" alt="Curve Reconstruction" width="700"/>
   <p><b>Figure 6:</b> Left: Raw blue pixel mask. Middle: Reconstructed mask via interpolation. Right: The final digital curve perfectly tracking the underlying plot.</p>
 </div>
 
@@ -92,7 +92,7 @@ The drill rate (Weight on Bit) is represented by a fluctuating blue curve.
 To tie the X/Y coordinates back to physical reality, the model dynamically detects the green dashed horizontal lines in the background of the chart. By calculating the pixel distance between these lines, the algorithm establishes the exact pixel-to-meter scale factor. The X-axis drill rate is then mapped and normalized.
 
 <div align="center">
-  <img src="assets/drillrate_output.jpg" alt="Drill Rate Output" width="300"/>
+  <img src="assets/drillrate_output.png" alt="Drill Rate Output" width="300"/>
   <p><b>Figure 7:</b> Final structured output showing the calculated drill rate strictly mapped to depth intervals.</p>
 </div>
 
