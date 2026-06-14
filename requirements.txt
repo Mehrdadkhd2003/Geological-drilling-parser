@@ -1,0 +1,7 @@
+numpy
+opencv-python
+matplotlib
+pdf2image
+Pillow
+pytesseract
+jupyter
