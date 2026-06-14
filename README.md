@@ -23,7 +23,7 @@ The system specifically extracts:
 *Note: For confidentiality and proprietary reasons, the original drilling reports are not included in this repository. You must provide your own scanned reports to run the pipeline.*
 
 <div align="center">
-  <img src="assets/report_overview.jpg" alt="Report Overview" width="600"/>
+  <img src="assets/report_overview.png" alt="Report Overview" width="700"/>
   <p><b>Figure 1:</b> Example section of the raw geothermal drilling report structure.</p>
 </div>
 
